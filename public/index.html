@@ -3,10 +3,11 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Gary J. Simkins</title>
     <style>
     </style>
-    <link rel="stylesheet" href="index.css"> <!-- PLACE HOLDER -->
+    <link rel="stylesheet" href="index.css">
     <script>
         // PLACEHOLDER
     </script>
@@ -14,39 +15,39 @@
 
 <body>
     <header>
-        <nav>
+        <nav id="top-navbar">
             <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="#mywork-section">My Work</a></li>
-                <li><a href="#aboutme-section">About Me</a></li>
-                <li><a href="/experimental.html">Experimental</a></li>
+                <li><a class="navbar-item scale" href="/index.html">Home</a></li>
+                <li><a class="navbar-item scale text-link" href="#mywork-segment">My Work</a></li>
+                <li><a class="navbar-item scale text-link" href="#aboutme-segment">About Me</a></li>
+                <li><a class="navbar-item scale" href="/experimental.html">Experimental</a></li>
+
+                <a class=" navbar-contact-me" href="mailto:garyjsimkins@gmail.com" target="_blank">Contact Me</a>
             </ul>
         </nav>
     </header>
     <main>
-        <div id="intro-section">
-            <section>
-                <h1>Hello! I'm Gary J. Simkins :)</h1>
-            </section>
+        <div id="intro-segment" class="segment">
+            <h1 id="main-title">Hello! <br /> I'm Gary J. <br /> Simkins <br /> :)</h1>
 
-            <section>
+            <section id="intro-section">
                 <picture>
                     <img src="./media/headshot.png" alt="headshot" width=250 />
                 </picture>
-                <h3>I am a Computer Science student at UCSD interested in web development. </h3>
+                <h3 id="intro-text">I am a Computer Science student at UCSD interested in software development. </h3>
+
             </section>
 
-            <a href="mailto:garyjsimkins@gmail.com" target="_blank">Contact Me</a>
         </div>
 
-        <div id="mywork-section">
-            <h2>My Work</h2>
+        <div id="mywork-segment" class="segment">
+            <h2 class="segment-title">My Work</h2>
             <hr />
-            <section>
+            <section class="project-card scale">
                 <h3>PomoTimer</h3>
                 <h4>Winter 2021</h4>
                 <hr />
-                <img src="./media/pomo.jpg" alt="Pomodoro web application" width=225 />
+                <img src="./media/pomo.jpg" alt="Pomodoro web application" />
                 <p>Practiced agile in a team of 8 to produce a Pomodoro Timer web application.</p>
             </section>
             <template>
@@ -58,25 +59,32 @@
             </template>
         </div>
 
-        <div id="aboutme-section">
-            <h2>About Me</h2>
+        <div id="aboutme-segment" class="segment">
+            <h2 class="segment-title">About Me</h2>
             <hr />
-            <p>
+            <p class="aboutme">
                 I am an aspiring Software Developer trying to figure out what exactly I want to do. Currently, I am
-                studying Computer Science at UCSD. I have worked with Java, C++, React, and the basics of web
+                studying Computer Science at UCSD. So far I have worked with Java, C++, React, and the basics of web
                 development. When
-                I'm not coding I enjoy playing video games, playing basketball, and watching Esports.
+                I'm not coding I enjoy playing video games, basketball, and watching Esports.
             </p>
-            <a href="./media/garyjsimkins_resume.pdf" download="garyjsimkins_resume.pdf">Download Resume</a>
-            <a href="mailto:garyjsimkins@gmail.com" target="_blank">Contact Me</a>
+            <section class="aboutme-links">
+                <a class="resume" href="./media/garyjsimkins_resume.pdf" download="garyjsimkins_resume.pdf">Download
+                    Resume</a>
+                <a class="contact-me" href="mailto:garyjsimkins@gmail.com" target="_blank">Contact Me</a>
+            </section>
         </div>
     </main>
     <footer>
-        <a href="https://github.com/gjsimkins" target="_blank">
-            <img src="./media/github.png" alt="Github" width=35 />
+        <a class="social-link" href="https://github.com/gjsimkins" target="_blank">
+            <picture>
+                <img src="./media/github.png" alt="Github" />
+            </picture>
         </a>
-        <a href="https://www.linkedin.com/in/gary-simkins-09ab94201/" target="_blank">
-            <img src="./media/linkedin.png" alt="LinkedIn" width=35 />
+        <a class="social-link" href="https://www.linkedin.com/in/gary-simkins-09ab94201/" target="_blank">
+            <picture>
+                <img src="./media/linkedin.png" alt="LinkedIn" />
+            </picture>
         </a>
     </footer>
 </body>

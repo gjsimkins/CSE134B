@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "mywebsite-dc536"
-  }
+    "default": "mywebsite-dc536",
+    "hw3": "mywebsite2-6c093"
+  },
+  "targets": {}
 }
