@@ -2,15 +2,19 @@
 <html lang="en">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WDZF64C4G4"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { window.dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-WDZF64C4G4');
+    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Gary J. Simkins</title>
-    <style>
-    </style>
     <link rel="stylesheet" href="index.css">
-    <script>
-        // PLACEHOLDER
-    </script>
 </head>
 
 <body>
@@ -20,9 +24,10 @@
                 <li><a class="navbar-item scale" href="/index.html">Home</a></li>
                 <li><a class="navbar-item scale text-link" href="#mywork-segment">My Work</a></li>
                 <li><a class="navbar-item scale text-link" href="#aboutme-segment">About Me</a></li>
+                <li><a class="navbar-item scale text-link" href="#games-segment">Games</a></li>
                 <li><a class="navbar-item scale" href="/experimental.html">Experimental</a></li>
-                <li class="li-contact-me"><a class=" navbar-contact-me" href="mailto:garyjsimkins@gmail.com"
-                        target="_blank">Contact Me</a>
+                <li class="li-contact-me" id="contact-me-1"><a class=" navbar-contact-me"
+                        href="mailto:garyjsimkins@gmail.com" target="_blank">Contact Me</a>
                 </li>
 
             </ul>
@@ -55,10 +60,23 @@
                 </picture>
                 <p>Practiced agile in a team of 8 to produce a Pomodoro Timer web application.</p>
             </section>
+            <section class="project-card scale">
+                <h3>ACM Projects</h3>
+                <h4>Current</h4>
+                <hr />
+                <p>Working in a team of 6 to create a web board centered around UCSD student events. Using this app UCSD
+                    students can post events they or their clubs are hosting and students can find events to go to.
+                </p>
+            </section>
             <template>
-                <section>
+                <section class="project-card scale">
                     <h3>Title</h3>
-                    <img />
+                    <h4>Time</h4>
+                    <hr />
+                    <picture>
+                        <source media="(max-width: 300px)" srcset="">
+                        <img src="" alt="" />
+                    </picture>
                     <p>Description</p>
                 </section>
             </template>
@@ -67,31 +85,138 @@
         <div id="aboutme-segment" class="segment">
             <h2 class="segment-title">About Me</h2>
             <hr />
-            <p class="aboutme">
+            <p class="p-text">
                 I am an aspiring Software Developer trying to figure out what exactly I want to do. Currently, I am
                 studying Computer Science at UCSD. So far I have worked with Java, C++, React, and the basics of web
                 development. When
                 I'm not coding I enjoy playing video games, basketball, and watching Esports.
             </p>
             <section class="aboutme-links">
-                <a class="resume" href="./media/garyjsimkins_resume.pdf" download="garyjsimkins_resume.pdf">Download
+                <a class="resume"
+                    href="https://drive.google.com/file/d/1b4Q3sdQNPx3llpl4df3WgP4mX_SF3dWo/view?usp=sharing"
+                    target="_blank">Download
                     Resume</a>
-                <a class="contact-me" href="mailto:garyjsimkins@gmail.com" target="_blank">Contact Me</a>
+                <a class="contact-me" id="contact-me-2" href="mailto:garyjsimkins@gmail.com" target="_blank">Contact
+                    Me</a>
             </section>
         </div>
+        <div class="social-segment">
+            <a class="social-link" href="https://github.com/gjsimkins" target="_blank">
+                <picture>
+                    <img src="./media/github.png" alt="Github" />
+                </picture>
+            </a>
+            <a class="social-link" href="https://www.linkedin.com/in/gary-simkins-09ab94201/" target="_blank">
+                <picture>
+                    <img src="./media/linkedin.png" alt="LinkedIn" />
+                </picture>
+            </a>
+        </div>
+        <div id="games-segment" class="segment">
+            <h2 class="segment-title">Games</h2>
+            <hr />
+            <p class="p-text">Another thing I really enjoy is playing video games in my free time. So I thought it would
+                be fun to
+                include a little section about my favorite games of all time. </p>
+            <ol class="games-list">
+                <li>
+                    <div class="game-li">
+                        <h3>Minecraft</h3>
+                        <hr />
+                        <p>Minecraft was one of the first games that I was really hooked on when I was little. Lead to
+                            me to play a lot of other games. Don't play as much anymore but still my favorite game of
+                            all time.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="game-li">
+                        <h3>Counter-Strike Global Offensive</h3>
+                        <hr />
+                        <p>If Minecraft isn't my most played game, CSGO definitely is. CSGO hooked me into PC FPS games
+                            and I have been playing ever since. Again, I might not play much anymore but CSGO has a
+                            special place in my heart. </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="game-li">
+                        <h3>Super Smash Bros.</h3>
+                        <hr />
+                        <p>I grew up mashing buttons playing Brawl and having no idea what was going on. The release of
+                            Super Smash Bros. Ultimate brought me back and is one of my favorite games to play in my
+                            spare time. However, since the online is so bad I rarely get a chance to play with my
+                            friends. I also like to occasionally go to some tournaments for fun. </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="game-li">
+                        <h3>Pokemon</h3>
+                        <hr />
+                        <p>Pokemon was one of my favorite games growing up. If your someone who knows me, you know for
+                            some reason I chose to associate myself with everything squirtle. Anyways, Pokemon is a
+                            classic to me and I still buy and play a Pokemon game here and there.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="game-li">
+                        <h3>Brawlhalla</h3>
+                        <hr />
+                        <p> Brawlhalla is probably the smallest game on this list. Its an indie platform fighter (Or
+                            used to be indie as it got bought out by Ubisoft). It is the game that got my into platform
+                            fighters and my second most played game on Steam.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="game-li">
+                        <h3>Fortnite</h3>
+                        <hr />
+                        <p>I know, I know, "Fortnite is for little kids." But for me, I had some of the most fun playing
+                            Fortnite all day with my friends back during its peak. It was probably the golden age of
+                            gaming for me, including CSGO, where me and friends would play all the time with no worries.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="game-li">
+                        <h3>Halo</h3>
+                        <hr />
+                        <p>I grew up playing Halo and still like playing it sometimes today. Another classic to me that
+                            I stil enjoy and come back to.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="game-li">
+                        <h3>Apex Legends</h3>
+                        <hr />
+                        <p> Apex is one of my favorite games to play for the past year or so. I played on release a
+                            little but got back into it a lot more a year or so ago. Its movement and abilites make it
+                            one of my most fun FPS to play right now.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="game-li">
+                        <h3>Mario</h3>
+                        <hr />
+                        <p> Another game I grew up playing that I would still play today. More specifically I loved the
+                            3D Mario's such as both Mario Galaxies and Mario 64.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="game-li">
+                        <h3>Lego Star Wars</h3>
+                        <hr />
+                        <p> My last pick is somewhat a throw up. But as a kid I would confidently say Lego Star Wars:
+                            The Complete Saga was my favorite game so I have to include it.
+                        </p>
+                    </div>
+                </li>
+
+            </ol>
+        </div>
     </main>
-    <footer>
-        <a class="social-link" href="https://github.com/gjsimkins" target="_blank">
-            <picture>
-                <img src="./media/github.png" alt="Github" />
-            </picture>
-        </a>
-        <a class="social-link" href="https://www.linkedin.com/in/gary-simkins-09ab94201/" target="_blank">
-            <picture>
-                <img src="./media/linkedin.png" alt="LinkedIn" />
-            </picture>
-        </a>
-    </footer>
 </body>
 
 </html>

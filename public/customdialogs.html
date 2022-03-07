@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Gary J. Simkins</title>
+    <script type="text/javascript" src="./scripts/purify.min.js"></script>
+    <script type="module" src="./scripts/customdialog.js"></script>
+    <script type="module" src="./scripts/custom.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Dialogs</h1>
+    </header>
+    <main>
+        <button id="alert">Alert</button>
+        <button id="confirm">Confirm</button>
+        <button id="prompt">Prompt</button>
+        <h1>Output:</h1>
+        <output id="output"></output>
+
+        <dialog id="alert-dialog">
+            <form method="dialog">
+                <p id="alert-text"></p>
+                <menu>
+                    <button id="alertBtn" value="default">Ok</button>
+                </menu>
+            </form>
+        </dialog>
+
+        <dialog id="confirm-dialog">
+            <form method="dialog">
+                <p id="confirm-text"></p>
+                <menu>
+                    <button value="cancel">Cancel</button>
+                    <button id="confirmBtn" value="default">Ok</button>
+                </menu>
+            </form>
+        </dialog>
+
+        <dialog id="prompt-dialog">
+            <form method="dialog">
+                <p id="prompt-text"></p>
+                <input type="text" id="prompt-input">
+                <menu>
+                    <button value="cancel">Cancel</button>
+                    <button id="promptBtn" value="default">Ok</button>
+                </menu>
+            </form>
+        </dialog>
+    </main>
+</body>
+
+</html>

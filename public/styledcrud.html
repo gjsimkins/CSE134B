@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Gary J. Simkins</title>
+    <link rel="stylesheet" href="crud.css">
+    <script type="text/javascript" src="./scripts/purify.min.js"></script>
+    <script type="module" src="./scripts/blogstorage.js"></script>
+    <script type="module" src="./scripts/styledblogdisplay.js"></script>
+    <script type="module" src="./scripts/styledblog.js"></script>
+</head>
+
+<body>
+
+    <h1>Posts</h1>
+    <button id="add-button">Add Post</button>
+    <div id="list-container"></div>
+
+    <dialog id="add-dialog">
+        <form method="dialog" class="my-dialog">
+            <h3 class="dialog-title">Add Post</h3>
+            <label for="title-input">Title:</label>
+            <input type="text" id="title-input">
+            <label for="summary-input">Summary:</label>
+            <textarea type="text" id="summary-input" maxlength="100" cols="30" rows="4"></textarea>
+            <menu>
+                <button value="cancel">Cancel</button>
+                <button value="default">Confirm</button>
+            </menu>
+        </form>
+    </dialog>
+
+    <dialog id="edit-dialog">
+        <form method="dialog" class="my-dialog">
+            <h3 class="dialog-title">Edit Post</h3>
+            <label for="edit-title-input">Title:</label>
+            <input type="text" id="edit-title-input">
+            <label for="edit-summary-input">Summary:</label>
+            <textarea type="text" id="edit-summary-input" maxlength="100" cols="30" rows="4"></textarea>
+            <menu>
+                <button value="cancel">Cancel</button>
+                <button value="default">Confirm</button>
+            </menu>
+        </form>
+    </dialog>
+</body>
+
+</html>
