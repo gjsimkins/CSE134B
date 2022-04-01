@@ -6,16 +6,30 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Gary J. Simkins</title>
     <link rel="stylesheet" href="crud.css">
+    <script src="./scripts/main.js"></script>
     <script type="text/javascript" src="./scripts/purify.min.js"></script>
-    <script type="module" src="./scripts/blogstorage.js"></script>
-    <script type="module" src="./scripts/styledblogdisplay.js"></script>
     <script type="module" src="./scripts/styledblog.js"></script>
+
 </head>
 
 <body>
-
-    <h1>Posts</h1>
-    <button id="add-button">Add Post</button>
+    <form id="signin-form">
+        <label for="email-signin">Email:</label>
+        <input type="text" id="email-signin" name="email-signin">
+        <label for="pass-signin">Password:</label>
+        <input type="password" id="pass-signin" name="pass-signin">
+        <input type="button" id="btn-signin" value="Sign In">
+        <p id="msg-signin"></p>
+    </form>
+    <form id="signout-form">
+        <input type="button" id="btn-signout" value="Sign Out">
+    </form>
+    <h1 id="title">Posts</h1>
+    <form id="admin-form">
+        <input type="button" id="add-button" value="Add Post">
+        <input type="button" id="get" value="Get Remote Database">
+        <input type="button" id="post" value="Update Remote Database from Local">
+    </form>
     <div id="list-container"></div>
 
     <dialog id="add-dialog">

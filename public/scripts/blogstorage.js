@@ -1,11 +1,12 @@
 // Handles all storage of the posts
-const posts = JSON.parse(localStorage.getItem('posts')) ? JSON.parse(localStorage.getItem('posts')) : [{
-    valid: true, title: 'DefaultPost1', date: '01/01/2001', summary: 'This is the default summary.',
-}, {
-    valid: true, title: 'DefaultPost2', date: '02/02/2002', summary: 'This is the default summary.',
-}, {
-    valid: true, title: 'DefaultPost3', date: '03/03/2003', summary: 'This is the default summary.',
-}];
+
+let posts = JSON.parse(localStorage.getItem('posts')) ? JSON.parse(localStorage.getItem('posts')) : [];
+
+function setPosts(newPosts) {
+    posts = newPosts;
+    localStorage.setItem('posts', JSON.stringify(posts));
+}
+
 function createPost(title, date, summary) {
     posts.push({
         valid: true,
@@ -42,9 +43,10 @@ function deletePost(index) {
 }
 
 function getPosts() {
+    posts = JSON.parse(localStorage.getItem('posts')) ? JSON.parse(localStorage.getItem('posts')) : [];
     return posts;
 }
 
 export {
-    createPost, readPost, updatePost, deletePost, getPosts,
+    createPost, readPost, updatePost, deletePost, getPosts, setPosts,
 };

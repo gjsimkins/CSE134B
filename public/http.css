@@ -1,0 +1,19 @@
+body {
+    font-family: Helvetica, Sans-serif;
+}
+
+#response {
+    white-space: pre;
+}
+
+.article-form {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    align-items: center;
+}
+
+input, textarea {
+    margin-bottom: 5px;
+    width: 50%;
+}

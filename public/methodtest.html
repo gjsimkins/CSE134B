@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Gary J. Simkins</title>
+
+    <link rel="stylesheet" href="http.css">
+</head>
+
+<body>
+    <form>
+        <fieldset class="article-form">
+            <legend>Article Form</legend>
+            <label for="article_id">ID:</label>
+            <input type="number" id="article_id" name="article_id">
+            <label for="article_name">Article Name:</label>
+            <input type="text" name="article_name" id="article_name">
+            <label for="article_body">Article Body:</label>
+            <textarea name="article_body" id="article_body" cols="30" rows="10"></textarea>
+
+            <input type="date" id="article_date" disabled>
+
+            <input type="button" id="postBtn" value="Post">
+            <input type="button" id="getBtn" value="Get">
+            <input type="button" id="putBtn" value="Put">
+            <input type="button" id="deleteBtn" value="Delete">
+        </fieldset>
+    </form>
+    <h2>Response Output:</h2>
+    <output id="response"></output>
+</body>
+
+<script type="text/javascript" src="./scripts/http.js"></script>
+
+</html>

@@ -1,8 +1,9 @@
 {
   "projects": {
-    "default": "mywebsite-dc536",
+    "default": "cse134b-hw5-6385f",
     "hw3": "mywebsite2-6c093",
-    "HW4": "cse134b-hw4-c880f"
+    "HW4": "cse134b-hw4-c880f",
+    "hw5": "cse134b-hw5-6385f"
   },
   "targets": {}
 }

@@ -2,22 +2,21 @@ import {
     createPost, deletePost, getPosts,
 } from './blogstorage.js';
 
-const blogCont = document.getElementById('list-container');
-
-const edDiag = document.getElementById('edit-dialog');
-
 function editPost(index) {
     window.currIndex = index;
+    const edDiag = document.getElementById('edit-dialog');
     edDiag.showModal();
+    displayPosts(1);
 }
 
 function removePost(index) {
     deletePost(index);
-    displayPosts();
+    displayPosts(1);
 }
 
-function displayPosts() {
+function displayPosts(loggedIn) {
     const posts = getPosts();
+    const blogCont = document.getElementById('list-container');
     blogCont.innerHTML = '';
     const list = document.createElement('ul');
     for (let i = posts.length - 1; i >= 0; i--) {
@@ -39,29 +38,33 @@ function displayPosts() {
             sum.setAttribute('class', 'blog-sum');
             sum.innerText = posts[i].summary;
 
-            const delBtn = document.createElement('input');
-            const edBtn = document.createElement('input');
-            delBtn.innerText = 'Delete';
-            edBtn.innerText = 'Edit';
-            delBtn.setAttribute('class', 'change-btn');
-            edBtn.setAttribute('class', 'change-btn');
+            if (loggedIn == 1) {
+                const delBtn = document.createElement('input');
+                const edBtn = document.createElement('input');
+                delBtn.innerText = 'Delete';
+                edBtn.innerText = 'Edit';
+                delBtn.setAttribute('class', 'change-btn');
+                edBtn.setAttribute('class', 'change-btn');
 
-            delBtn.setAttribute('type', 'image');
-            edBtn.setAttribute('type', 'image');
+                delBtn.setAttribute('type', 'image');
+                edBtn.setAttribute('type', 'image');
 
-            delBtn.setAttribute('src', './media/delete.png');
-            edBtn.setAttribute('src', './media/edit.png');
-            edBtn.onclick = () => {
-                editPost(i);
-            };
-            delBtn.onclick = () => {
-                removePost(i);
-            };
+                delBtn.setAttribute('src', './media/delete.png');
+                edBtn.setAttribute('src', './media/edit.png');
+                edBtn.onclick = () => {
+                    editPost(i);
+                };
+                delBtn.onclick = () => {
+                    removePost(i);
+                };
+
+                wrapper.append(edBtn);
+                wrapper.append(delBtn);
+            }
+
             wrapper.append(title);
             wrapper.append(date);
             wrapper.append(sum);
-            wrapper.append(edBtn);
-            wrapper.append(delBtn);
             entry.append(wrapper);
             list.appendChild(entry);
         }
@@ -77,7 +80,31 @@ function addPost(title, summary) {
 
     const date = `${mm}/${dd}/${yyyy}`;
     createPost(title, date, summary);
-    displayPosts();
+    displayPosts(1);
 }
 
-export { displayPosts, addPost };
+function hideAdmin() {
+    const signInForm = document.getElementById('signin-form');
+    const signOutForm = document.getElementById('signout-form');
+    const adminForm = document.getElementById('admin-form');
+    const title = document.getElementById('title');
+    title.innerText = 'Posts';
+    signInForm.style.display = 'flex';
+    signOutForm.style.display = 'none';
+    adminForm.style.display = 'none';
+}
+
+function showAdmin() {
+    const signInForm = document.getElementById('signin-form');
+    const signOutForm = document.getElementById('signout-form');
+    const adminForm = document.getElementById('admin-form');
+    const title = document.getElementById('title');
+    title.innerText = 'Posts (Admin View)';
+    signInForm.style.display = 'none';
+    signOutForm.style.display = 'block';
+    adminForm.style.display = 'block';
+}
+
+export {
+    displayPosts, addPost, hideAdmin, showAdmin,
+};

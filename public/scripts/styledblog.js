@@ -49,12 +49,10 @@ edSum.addEventListener('change', () => {
 edDiag.addEventListener('close', () => {
     if (edDiag.returnValue !== 'cancel') {
         updatePost(window.currIndex, title, summary);
-        displayPosts();
+        displayPosts(1);
     }
     edTitle.value = '';
     title = '';
     edSum.value = '';
     summary = '';
 });
-
-displayPosts();

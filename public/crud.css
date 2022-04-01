@@ -54,7 +54,9 @@ textarea {
     margin-bottom: 5px;
 }
 
-#add-button {
+#add-button, #get, #post, #btn-signout, #btn-signin {
+    font-size: 1.1rem;
+    margin: 5px;
     border: 3px solid blue;
     border-radius: 25px;
     color: blue;
@@ -63,7 +65,7 @@ textarea {
     margin-top: 0px;
 }
 
-#add-button:hover {
+#add-button:hover, #btn-signin:hover, #get:hover, #post:hover, #btn-signout:hover {
     cursor: pointer;
 
 }
@@ -71,4 +73,18 @@ textarea {
 h1 {
     padding-top: 5px;
     font-size: 3rem;
+}
+
+#signin-form {
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 300px;
+    border: 1px solid black;
+}
+
+#btn-signin {
+    margin-top: 10px;
 }
